@@ -1,0 +1,45 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main-container{
+  color: rgba(27, 147, 246, 0.319) ;
+}
+.show-container {
+  width: 300px;
+  margin: 10px;
+}
+body{
+  /* background-image: url(https://i.pinimg.com/originals/c4/6d/b4/c46db43fbd5cdbe8a6b11a69b65940e4.jpg); */
+  background-image: linear-gradient(to right, red , yellow);
+}
+
+.show-container img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+/* BUTTON EFFECT */
+/******************************** */
+.button-effect {
+  display: block;
+  transform: scale(1.0);
+  transition: transform 0.23s ease-in-out;
+}
+
+.button-effect:hover {
+  transform: scale(1.13);
+  filter: drop-shadow(0 0 10px rgba(0, 5, 9, 0.319));
+  z-index: 999;
+}
+
+/* Disable hover effects on mobile */
+@media (max-width: 768px) {
+  .button-effect:hover
+  {
+      transform: scale(1.0);
+      filter: none;
+  }
+}
